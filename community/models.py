@@ -14,11 +14,11 @@ class Profile(models.Model):
     bio = models.CharField(max_length = 100)
     profile_pic = models.ImageField(upload_to='profile/')
     neighbourhood = models.ForeignKey('Neighbourhood',blank=True,null=True)
-    contact =models.CharField(max_length=100,bank=True)
+    contact =models.CharField(max_length=100,blank=True)
 
 class Bussiness(models.Model):
     photo = models.ImageField(upload_to='bussiness/',default='bussiness/bdefault.jpg')
-    name = models.CharField(max_length)
+    name = models.CharField(max_length=30)
     user = models.ForeignKey(User)
     neighbourhood = models.ForeignKey('Neighbourhood',related_name='business')
     email = models.CharField(max_length=30)
