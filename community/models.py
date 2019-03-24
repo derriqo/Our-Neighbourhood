@@ -18,3 +18,8 @@ class Profile(models.Model):
 
 class Bussiness(models.Model):
     name = models.CharField(max_length)
+    profile = models.ForeignKey('Profile',related_name='profiles')
+    neighbourhood = models.ForeignKey('Neighbourhood',related_name='business')
+    email = models.CharField(max_length=30)
+
+
