@@ -12,8 +12,7 @@ def home(request):
 
 @login_required(login_url='accounts/')
 def profile(request):
-
-    profile = Profile.objects.get(user=request.user)
+    profile = request.user.profile
     hoods = Neighbourhood.objects.all()
 
     return render(request,'profile/profile.html', {'profile':profile , 'hoods':hoods} )
