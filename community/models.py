@@ -36,6 +36,9 @@ class Neighbourhood(models.Model):
     occupants_count = models.IntegerField(default=0,blank=True)
     admin = models.ForeignKey(Profile, related_name='hoods', null=True)
 
+    def __str__(self):
+        return self.neighbourhood_name
+
     def save_neighbourhood(self):
         self.save()
 
@@ -47,7 +50,8 @@ class Bussiness(models.Model):
     profile = models.ForeignKey(Profile, related_name='profiles')
     email = models.CharField(max_length=30)
 
-
+    def __str__(self):
+        return self.name
 
 
 

@@ -12,29 +12,31 @@
           {% block styles %}
           {% bootstrap_css %}
         {% endblock %}
-      
         </head>
         <body >
-        <div class="yanav justify-content-between" style="margin-bottom: 10%;">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-          
+        <div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top " style="margin-bottom: 5%;">
           <a class="navbar-brand" href="{% url 'home' %}">Our Neighbourhood</a>
           {% if user.is_authenticated %}
-          <ul class="navbar-nav  mr-auto ">
-            <li class="nav-item">
-              <a class="nav-link" href="">Admin</a>
+          <ul class="navbar-nav ">
+
+            <li class="nav-item"><a class="nav-link" href="">Admin</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+
+            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'bussiness' %}">Add Bussiness</a>
+
+            <li class="nav-item"><a class="nav-link" href="{% url 'bussiness' %}">Add Bizz</a>
+            </li>
+            
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'biz_page' %}">Bussiness</a>
               </li>
           </ul>
           <div class="input-group">
-              <input type="text" class="form-control " placeholder="Search Bussiness" name="Saka">
+              <input type="text" class="form-control " placeholder="Search Bussiness" name="Saka" style=" width:30%" >
               <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                <!-- <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" ></i></button> -->
               </div>
             </div>
             <ul class="navbar-nav" >
@@ -43,11 +45,11 @@
               </li>
             </ul>
             {% else %}
-          <ul class="nav navbar-nav navbar-right" >
+          <ul class="nav navbar-nav navbar-left" >
               <li  class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>Login</a>
               </li>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="{% url 'signup' %}"><span class="glyphicon glyphicon-user"></span>SignUp</a>
               </li>
             </ul>
