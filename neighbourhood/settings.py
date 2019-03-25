@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'community',
     'bootstrap4',
+    'bootstrap3',
     'accounts',
 ]
 

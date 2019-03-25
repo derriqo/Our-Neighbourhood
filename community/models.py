@@ -9,8 +9,9 @@ class Profile(models.Model):
     bio = models.CharField(max_length = 100)
     profile_pic = models.ImageField(upload_to='profile/')
     neighbourhood = models.ForeignKey('Neighbourhood',blank=True,null=True)
-    contact =models.CharField(max_length=100,blank=True)
+    email =models.EmailField(max_length=50,blank=True)
     pub_date_created = models.DateTimeField(auto_now_add=True, null=True)
+
 
 class Neighbourhood(models.Model):
     neighbourhood_name = models.CharField(max_length=30,blank=True)

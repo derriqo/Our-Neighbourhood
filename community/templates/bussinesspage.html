@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block content %}
+<div class="w3-container w3-center" >
+        <div class="w3-row w3-center">
+      {% for bussiness in bussinesses %}
+      
+      <div class="w3-col l3  w3-card-4 w3-round w3-margin " >
+        <img class="w3-image w3-hover-opacity" src="{{bussiness.photo.url}}" alt="Card image">
+        <div class="w3-container w3-transparent">
+          <h4 class="w3-center">{{bussiness.name}}</h4>
+          <p class="w3-center">{{bussiness.neighbourhood}}</p>
+        </div>
+      </div>
+    
+    {% endfor %}
+  </div>
+    </div>
+{% endblock %}

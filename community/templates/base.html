@@ -1,4 +1,4 @@
-{% load bootstrap4 %}
+{% load bootstrap3 %}
 {% load static %}
         <!DOCTYPE html>
         <html lang="en">
@@ -7,6 +7,7 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
           <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
           {% block styles %}
           {% bootstrap_css %}
@@ -26,6 +27,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'profile' %}">Profile</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'bussiness' %}">Add Bussiness</a>
+              </li>
           </ul>
           <div class="input-group">
               <input type="text" class="form-control" placeholder="Search Bussiness" name="Saka">
