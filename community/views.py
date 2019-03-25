@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Profile,Neighbourhood,Bussiness
 from django.contrib.auth.decorators import login_required
-
+import datetime as dt
 
 # Create your views here.
 def home(request):
@@ -10,7 +10,7 @@ def home(request):
 
 @login_required(login_url='accounts/')
 def profile(request):
-    current__user = request.user
+
     return render(request,'profile/profile.html')
 
 def edit_profile(request):

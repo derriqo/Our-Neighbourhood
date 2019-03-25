@@ -6,7 +6,7 @@ from django.conf import settings
 urlpatterns=[
     url('^$',views.home,name='home'),
     url('^profile/',views.profile,name='profile'),
-    url(r'^edit/profile/$',views.edit_profile,name='edit_profile'),
+    url('^edit/',views.edit_profile,name='edit_profile'),
 ]
 
 if settings.DEBUG:
