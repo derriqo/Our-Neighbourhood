@@ -6,11 +6,11 @@
 <div class="w3-container w3-center" >
         <div class="w3-row w3-center">
       {% for bussiness in bussinesses %}
-      
+      <h1>Businesses in {{bussiness.neighbourhood}}</h1>
       <div class="w3-col l3  w3-card-4 w3-round w3-margin " >
         <img class="w3-image w3-hover-opacity" src="{{bussiness.photo.url}}" alt="Card image">
         <div class="w3-container w3-transparent">
-          <h4 class="w3-center">Bussiness Name:<strong>{{bussiness.name}}</strong> </h4>
+          <h4 class="w3-center">Business Name:<strong>{{bussiness.name}}</strong> </h4>
           <p class="w3-center">Neighbourhood:<strong> {{bussiness.neighbourhood}}</strong> </p>
         </div>
       </div>
