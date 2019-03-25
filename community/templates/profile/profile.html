@@ -8,7 +8,7 @@
         <div class="col-md-5">
             
             {% if profile.profile_pic %}
-            <img src="{{user.profile.profile_pic.ur}}" alt="" style="border-radius: 50% ; padding: 0.15rem;" class=" img-circle"  width="250px" height="250px">
+            <img src="{{profile.profile_pic.url}}" alt="" style="border-radius: 50% ; padding: 0.15rem;" class=" img-circle"  width="250px" height="250px">
             {% else %}
             <img data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 50% ; padding: 0.15rem;   background: linear-gradient(to right bottom, #2cd88888, #2ec96970);"
                 class=" img-circle" src="https://www.bristolbrewing.com/wp-content/uploads/2017/08/default-avatar.png"
@@ -16,8 +16,8 @@
             {% endif %}
         </div>
         <div class="col-md-7">
-            <h3>{{user.username}}</h3>
-            <h4>{{user.profile.bio}}</h4>
+            <h3>User Name : <strong> {{user.username}} </strong></h3>
+            <h4>Bio: <span> "{{user.profile.bio}}" </span></h4>
             <button class="btn btn-outline-light"> <a class="nav-link" style="color: blue;" href="/edit/"> Edit profile</a></button>
         </div>
     </div>

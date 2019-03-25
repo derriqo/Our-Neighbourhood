@@ -6,7 +6,7 @@ from django.conf import settings
 urlpatterns=[
     url('^$',views.home,name='home'),
     url('^profile/',views.profile,name='profile'),
-    # url('^edit/',views.edit_profile,name='edit_profile'),
+    url('^edit/',views.edit_profile,name='edit_profile'),
     url('^bussiness/',views.new_bussiness,name='bussiness'),
     url('^allbiz/',views.biz_page,name='biz_page'),
 ]

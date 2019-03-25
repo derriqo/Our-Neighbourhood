@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Profile,Neighbourhood,Bussiness
 from django.contrib.auth.decorators import login_required
 import datetime as dt
-from .forms import CreateBussiness
+from .forms import CreateBussiness,EditForm
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -17,19 +17,19 @@ def profile(request):
 
     return render(request,'profile/profile.html', {'profile':profile , 'hoods':hoods} )
 
-# def edit_profile(request):
-#     date = dt.date.today()
-#     current_user = request.user
-#     profile = Profile.objects.get(user=current_user.id)
-#     if request.method == 'POST':
-#         signup_form = EditForm(request.POST, request.FILES,instance=request.user.profile) 
-#         if signup_form.is_valid():
-#             signup_form.save()
-#             return redirect('profile')
-#     else:
-#         signup_form =EditForm() 
+def edit_profile(request):
+    date = dt.date.today()
+    current_user = request.user
+    profile = Profile.objects.get(user=current_user.id)
+    if request.method == 'POST':
+        signup_form = EditForm(request.POST, request.FILES,instance=request.user.profile) 
+        if signup_form.is_valid():
+            signup_form.save()
+            return redirect('profile')
+    else:
+        signup_form =EditForm() 
         
-#     return render(request, 'profile/update_profile.html', {"date": date, "form":signup_form,"profile":profile})
+    return render(request, 'profile/update_profile.html', {"date": date, "form":signup_form,"profile":profile})
 
 @login_required(login_url='accounts/')
 def new_bussiness(request):
