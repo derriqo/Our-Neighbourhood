@@ -9,4 +9,4 @@ class CreateBussiness(forms.ModelForm):
 class EditForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['bio','profile_pic','neighbourhood']
+        fields = ['bio','profile_pic','neighbourhood','email']

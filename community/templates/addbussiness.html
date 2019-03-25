@@ -1,12 +1,27 @@
 {%extends "base.html"%}
 {% load bootstrap3 %}
 {% block content %}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token%}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+            <div style="background-repeat: no-repeat; background-size: cover; background-image: url('https://mdbootstrap.com/img/Photos/Others/pricing-table%20(7).jpg');"
+            class="card">
+            <div style="text-align: center; " class="card-header">
+                <h2> Add Business</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
 
-    {% bootstrap_form form%}
-    <div class="form-group">
-        <input type="submit" class="btn btn-info" value="Post">
+                    {% bootstrap_form form%}
+                    <div class="form-group">
+                    <input type="submit" class="btn btn-warning btn-sm" value="Post">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</form>  
+    <div class="col-md-2"></div>
+</div>
+
 {% endblock content %}
