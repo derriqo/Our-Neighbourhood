@@ -5,3 +5,4 @@ class CreateBussiness(forms.ModelForm):
     class Meta:
        model = Bussiness
        fields = ['photo','neighbourhood','name']
+
