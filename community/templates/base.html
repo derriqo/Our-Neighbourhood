@@ -16,16 +16,17 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   
+          <link rel="stylesheet" href="{% static 'css/styles.css' %}">
           {% block styles %}
           {% bootstrap_css %}
           <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         {% endblock %}
       
         </head>
-        <body style="height:1500px">
-        
+        <body >
+        <div class="yanav">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          
           <a class="navbar-brand" href="#">Our Neighbourhood</a>
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -36,12 +37,9 @@
             </li>
           </ul>
         </nav>
-        
-        <div class="container-fluid" style="margin-top:80px">
-          <h3>Top Fixed Navbar</h3>
-          <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-          <h1>Scroll this page to see the effect</h1>
-        </div>
+      </div>
+
+   
         
         
     {% block content %}
@@ -51,6 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
      {% bootstrap_javascript %}
+    {% endblock %}
     {% endblock %}
 </body>
 </html>
