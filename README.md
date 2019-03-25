@@ -77,10 +77,10 @@ As a user i want to be able to posted photos and view other people's photos .
 | :---------------- | :---------------: | 
 | Page Opens | Login page displays  |
 | User Registers for an account | Registration form is displayed |
-| --- | An Email is sent to welcome the user to the Application |
+| --- | User is Logged in |
 | --- | The Homepage is displayed  |
-| User Uploads Photo/Photos |  Photos are displayed to the user's followers |
-| User clicks on Follow to follow other users on the app| User is able to view the images posted by the person they are following |
+| User selects profile |  User Profile is displayed |
+| User Interacts With Web App| User is able to register business also see those of others |
 | Signout| Enables user to Exit the Application |
 
 
