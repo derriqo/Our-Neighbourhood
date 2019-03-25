@@ -7,6 +7,7 @@
 
     <div class="row">
         <div class="col-md-5">
+            <p>{{current_user.username}}</p>
             {% if profile.profile_pic %}
             <section> <img data-toggle="modal" data-target="#exampleModalCenter" style="border-radius: 50% ; padding: 0.15rem;  background: linear-gradient(to right bottom, #2cd88888, #2ec96970);"
                     class=" img-circle" src="{{ profile.profile_pic.url}}" alt="" width="250px" height="250px"> {{
