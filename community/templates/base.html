@@ -8,12 +8,13 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+          <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
           <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
           {% block styles %}
           {% bootstrap_css %}
         {% endblock %}
         </head>
-        <body style="  background: linear-gradient(to right, #6190e8, #a7bfe8); color:white;">
+        <body style="  background: linear-gradient(to right, #6190e8, #a7bfe8); color:white; font-family: 'Old Standard TT', serif; font-size: 14px;">
         <div>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top " style="margin-bottom: 5%;">
           <a class="navbar-brand" href="{% url 'home' %}">Our Neighbourhood</a>
